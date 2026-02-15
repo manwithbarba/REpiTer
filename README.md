@@ -43,7 +43,7 @@ A partir de la versión **v1.0.3-beta**, se han incluido mejoras críticas en la
 
 ## 📄 Créditos y Licencia
 
-- **Autor**: [Ingresar Nombre o Institución aquí]
+- **Autor**: Julián Sánchez Viamonte, Facultad de Medicina Universidad Nacional de Mar del Plata
 - **Uso y Distribución**: Este software es de **distribución libre**. Se autoriza su uso, copia y redistribución, siempre que se mantenga la cita al autor original y se mencione a **REpiTer** como la fuente del desarrollo.
 
 ---

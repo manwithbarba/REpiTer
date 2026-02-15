@@ -33,12 +33,12 @@ public class AppDatabase_Impl : AppDatabase() {
 
 
   protected override fun createOpenDelegate(): RoomOpenDelegate {
-    val _openDelegate: RoomOpenDelegate = object : RoomOpenDelegate(1,
-        "18b733fbdc1133a4d47e6cb55299b271", "177bbdab8f64b14b2f1eb863f0578637") {
+    val _openDelegate: RoomOpenDelegate = object : RoomOpenDelegate(2,
+        "e6b6d615b68a788bda5698d3e15f90e8", "96fd9c4746c97441fac9798eb8c01d70") {
       public override fun createAllTables(connection: SQLiteConnection) {
-        connection.execSQL("CREATE TABLE IF NOT EXISTS `surveys` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `timestamp` INTEGER NOT NULL, `latitude` REAL, `longitude` REAL, `data_json` TEXT NOT NULL)")
+        connection.execSQL("CREATE TABLE IF NOT EXISTS `surveys` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `timestamp` INTEGER NOT NULL, `latitude` REAL, `longitude` REAL, `data_json` TEXT NOT NULL, `interviewer_name` TEXT, `interviewer_surname` TEXT, `interviewer_email` TEXT, `institution` TEXT)")
         connection.execSQL("CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)")
-        connection.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '18b733fbdc1133a4d47e6cb55299b271')")
+        connection.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'e6b6d615b68a788bda5698d3e15f90e8')")
       }
 
       public override fun dropAllTables(connection: SQLiteConnection) {
@@ -71,6 +71,14 @@ public class AppDatabase_Impl : AppDatabase() {
         _columnsSurveys.put("longitude", TableInfo.Column("longitude", "REAL", false, 0, null,
             TableInfo.CREATED_FROM_ENTITY))
         _columnsSurveys.put("data_json", TableInfo.Column("data_json", "TEXT", true, 0, null,
+            TableInfo.CREATED_FROM_ENTITY))
+        _columnsSurveys.put("interviewer_name", TableInfo.Column("interviewer_name", "TEXT", false,
+            0, null, TableInfo.CREATED_FROM_ENTITY))
+        _columnsSurveys.put("interviewer_surname", TableInfo.Column("interviewer_surname", "TEXT",
+            false, 0, null, TableInfo.CREATED_FROM_ENTITY))
+        _columnsSurveys.put("interviewer_email", TableInfo.Column("interviewer_email", "TEXT",
+            false, 0, null, TableInfo.CREATED_FROM_ENTITY))
+        _columnsSurveys.put("institution", TableInfo.Column("institution", "TEXT", false, 0, null,
             TableInfo.CREATED_FROM_ENTITY))
         val _foreignKeysSurveys: MutableSet<TableInfo.ForeignKey> = mutableSetOf()
         val _indicesSurveys: MutableSet<TableInfo.Index> = mutableSetOf()

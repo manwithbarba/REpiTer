@@ -1,6 +1,18 @@
 [
     {
+        "merged": "com.repit.v2.app-mergeDebugResources-41:/layout/activity_setup.xml",
+        "source": "com.repit.v2.app-main-44:/layout/activity_setup.xml"
+    },
+    {
         "merged": "com.repit.v2.app-mergeDebugResources-41:/layout/activity_form_selector.xml",
         "source": "com.repit.v2.app-main-44:/layout/activity_form_selector.xml"
+    },
+    {
+        "merged": "com.repit.v2.app-mergeDebugResources-41:/layout/dialog_institution_selector.xml",
+        "source": "com.repit.v2.app-main-44:/layout/dialog_institution_selector.xml"
+    },
+    {
+        "merged": "com.repit.v2.app-mergeDebugResources-41:/layout/item_institution.xml",
+        "source": "com.repit.v2.app-main-44:/layout/item_institution.xml"
     }
 ]

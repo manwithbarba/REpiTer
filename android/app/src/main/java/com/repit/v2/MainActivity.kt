@@ -20,6 +20,7 @@ import androidx.recyclerview.widget.RecyclerView
 import android.text.Editable
 import android.text.TextWatcher
 import android.widget.TextView
+import androidx.core.content.ContextCompat
 import com.repit.v2.data.model.FormField
 import com.repit.v2.ui.DynamicWidgetFactory
 import com.repit.v2.ui.MainViewModel
@@ -31,6 +32,7 @@ class MainActivity : AppCompatActivity() {
 
     private val viewModel: MainViewModel by viewModels()
     private val formContainer: LinearLayout by lazy { LinearLayout(this).apply { orientation = LinearLayout.VERTICAL } }
+    private val factory by lazy { DynamicWidgetFactory(this) }
     private val interviewerManager by lazy { InterviewerManager(this) }
     private var selectedInstitution: String? = null
     

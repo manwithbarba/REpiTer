@@ -3221,6 +3221,7 @@ id bounce
 id bounceBoth
 id bounceEnd
 id bounceStart
+id btnSave
 id buttonExportHistoric
 id buttonPanel
 id cache_measures
@@ -3304,6 +3305,10 @@ id end
 id endToStart
 id enterAlways
 id enterAlwaysCollapsed
+id etEmail
+id etName
+id etSearchInstitution
+id etSurname
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
@@ -3494,6 +3499,7 @@ id right_icon
 id right_side
 id rounded
 id row_index_key
+id rvInstitutions
 id save_non_transition_alpha
 id save_overlay_view
 id sawtooth
@@ -3602,6 +3608,8 @@ id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
 id triangle
+id tvInstitutionDetail
+id tvInstitutionName
 id unchecked
 id uniform
 id unlabeled
@@ -3742,6 +3750,7 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_form_selector
+layout activity_setup
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -3758,8 +3767,10 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout dialog_institution_selector
 layout ime_base_split_test_activity
 layout ime_secondary_split_test_activity
+layout item_institution
 layout m3_alert_dialog
 layout m3_alert_dialog_actions
 layout m3_alert_dialog_title

@@ -31,7 +31,7 @@ public class SurveyDao_Impl(
     this.__db = __db
     this.__insertAdapterOfSurveyResponse = object : EntityInsertAdapter<SurveyResponse>() {
       protected override fun createQuery(): String =
-          "INSERT OR REPLACE INTO `surveys` (`id`,`timestamp`,`latitude`,`longitude`,`data_json`) VALUES (nullif(?, 0),?,?,?,?)"
+          "INSERT OR REPLACE INTO `surveys` (`id`,`timestamp`,`latitude`,`longitude`,`data_json`,`interviewer_name`,`interviewer_surname`,`interviewer_email`,`institution`) VALUES (nullif(?, 0),?,?,?,?,?,?,?,?)"
 
       protected override fun bind(statement: SQLiteStatement, entity: SurveyResponse) {
         statement.bindLong(1, entity.id)
@@ -49,6 +49,30 @@ public class SurveyDao_Impl(
           statement.bindDouble(4, _tmpLongitude)
         }
         statement.bindText(5, entity.dataJson)
+        val _tmpInterviewerName: String? = entity.interviewerName
+        if (_tmpInterviewerName == null) {
+          statement.bindNull(6)
+        } else {
+          statement.bindText(6, _tmpInterviewerName)
+        }
+        val _tmpInterviewerSurname: String? = entity.interviewerSurname
+        if (_tmpInterviewerSurname == null) {
+          statement.bindNull(7)
+        } else {
+          statement.bindText(7, _tmpInterviewerSurname)
+        }
+        val _tmpInterviewerEmail: String? = entity.interviewerEmail
+        if (_tmpInterviewerEmail == null) {
+          statement.bindNull(8)
+        } else {
+          statement.bindText(8, _tmpInterviewerEmail)
+        }
+        val _tmpInstitution: String? = entity.institution
+        if (_tmpInstitution == null) {
+          statement.bindNull(9)
+        } else {
+          statement.bindText(9, _tmpInstitution)
+        }
       }
     }
   }
@@ -68,6 +92,11 @@ public class SurveyDao_Impl(
         val _cursorIndexOfLatitude: Int = getColumnIndexOrThrow(_stmt, "latitude")
         val _cursorIndexOfLongitude: Int = getColumnIndexOrThrow(_stmt, "longitude")
         val _cursorIndexOfDataJson: Int = getColumnIndexOrThrow(_stmt, "data_json")
+        val _cursorIndexOfInterviewerName: Int = getColumnIndexOrThrow(_stmt, "interviewer_name")
+        val _cursorIndexOfInterviewerSurname: Int = getColumnIndexOrThrow(_stmt,
+            "interviewer_surname")
+        val _cursorIndexOfInterviewerEmail: Int = getColumnIndexOrThrow(_stmt, "interviewer_email")
+        val _cursorIndexOfInstitution: Int = getColumnIndexOrThrow(_stmt, "institution")
         val _result: MutableList<SurveyResponse> = mutableListOf()
         while (_stmt.step()) {
           val _item: SurveyResponse
@@ -89,7 +118,32 @@ public class SurveyDao_Impl(
           }
           val _tmpDataJson: String
           _tmpDataJson = _stmt.getText(_cursorIndexOfDataJson)
-          _item = SurveyResponse(_tmpId,_tmpTimestamp,_tmpLatitude,_tmpLongitude,_tmpDataJson)
+          val _tmpInterviewerName: String?
+          if (_stmt.isNull(_cursorIndexOfInterviewerName)) {
+            _tmpInterviewerName = null
+          } else {
+            _tmpInterviewerName = _stmt.getText(_cursorIndexOfInterviewerName)
+          }
+          val _tmpInterviewerSurname: String?
+          if (_stmt.isNull(_cursorIndexOfInterviewerSurname)) {
+            _tmpInterviewerSurname = null
+          } else {
+            _tmpInterviewerSurname = _stmt.getText(_cursorIndexOfInterviewerSurname)
+          }
+          val _tmpInterviewerEmail: String?
+          if (_stmt.isNull(_cursorIndexOfInterviewerEmail)) {
+            _tmpInterviewerEmail = null
+          } else {
+            _tmpInterviewerEmail = _stmt.getText(_cursorIndexOfInterviewerEmail)
+          }
+          val _tmpInstitution: String?
+          if (_stmt.isNull(_cursorIndexOfInstitution)) {
+            _tmpInstitution = null
+          } else {
+            _tmpInstitution = _stmt.getText(_cursorIndexOfInstitution)
+          }
+          _item =
+              SurveyResponse(_tmpId,_tmpTimestamp,_tmpLatitude,_tmpLongitude,_tmpDataJson,_tmpInterviewerName,_tmpInterviewerSurname,_tmpInterviewerEmail,_tmpInstitution)
           _result.add(_item)
         }
         _result
@@ -109,6 +163,11 @@ public class SurveyDao_Impl(
         val _cursorIndexOfLatitude: Int = getColumnIndexOrThrow(_stmt, "latitude")
         val _cursorIndexOfLongitude: Int = getColumnIndexOrThrow(_stmt, "longitude")
         val _cursorIndexOfDataJson: Int = getColumnIndexOrThrow(_stmt, "data_json")
+        val _cursorIndexOfInterviewerName: Int = getColumnIndexOrThrow(_stmt, "interviewer_name")
+        val _cursorIndexOfInterviewerSurname: Int = getColumnIndexOrThrow(_stmt,
+            "interviewer_surname")
+        val _cursorIndexOfInterviewerEmail: Int = getColumnIndexOrThrow(_stmt, "interviewer_email")
+        val _cursorIndexOfInstitution: Int = getColumnIndexOrThrow(_stmt, "institution")
         val _result: MutableList<SurveyResponse> = mutableListOf()
         while (_stmt.step()) {
           val _item: SurveyResponse
@@ -130,7 +189,32 @@ public class SurveyDao_Impl(
           }
           val _tmpDataJson: String
           _tmpDataJson = _stmt.getText(_cursorIndexOfDataJson)
-          _item = SurveyResponse(_tmpId,_tmpTimestamp,_tmpLatitude,_tmpLongitude,_tmpDataJson)
+          val _tmpInterviewerName: String?
+          if (_stmt.isNull(_cursorIndexOfInterviewerName)) {
+            _tmpInterviewerName = null
+          } else {
+            _tmpInterviewerName = _stmt.getText(_cursorIndexOfInterviewerName)
+          }
+          val _tmpInterviewerSurname: String?
+          if (_stmt.isNull(_cursorIndexOfInterviewerSurname)) {
+            _tmpInterviewerSurname = null
+          } else {
+            _tmpInterviewerSurname = _stmt.getText(_cursorIndexOfInterviewerSurname)
+          }
+          val _tmpInterviewerEmail: String?
+          if (_stmt.isNull(_cursorIndexOfInterviewerEmail)) {
+            _tmpInterviewerEmail = null
+          } else {
+            _tmpInterviewerEmail = _stmt.getText(_cursorIndexOfInterviewerEmail)
+          }
+          val _tmpInstitution: String?
+          if (_stmt.isNull(_cursorIndexOfInstitution)) {
+            _tmpInstitution = null
+          } else {
+            _tmpInstitution = _stmt.getText(_cursorIndexOfInstitution)
+          }
+          _item =
+              SurveyResponse(_tmpId,_tmpTimestamp,_tmpLatitude,_tmpLongitude,_tmpDataJson,_tmpInterviewerName,_tmpInterviewerSurname,_tmpInterviewerEmail,_tmpInstitution)
           _result.add(_item)
         }
         _result

@@ -1,0 +1,159 @@
+{
+    "form_name": "Encuesta Permanente de Hogares (EPH) - Completa",
+    "fields": [
+        {
+            "id": "nombre",
+            "label": "Nombre",
+            "type": "text",
+            "required": true
+        },
+        {
+            "id": "apellido",
+            "label": "Apellido",
+            "type": "text",
+            "required": true
+        },
+        {
+            "id": "dni",
+            "label": "DNI",
+            "type": "number",
+            "required": true
+        },
+        {
+            "id": "tipo_vivienda",
+            "label": "Tipo de vivienda",
+            "type": "multiselect",
+            "options": [
+                "Casa",
+                "Departamento",
+                "Pieza en inquilinato",
+                "Rancho/Casilla",
+                "Local no construido para vivienda"
+            ],
+            "required": true
+        },
+        {
+            "id": "material_piso",
+            "label": "Material predominante del piso",
+            "type": "multiselect",
+            "options": [
+                "Mosaico/Baldosa/Cerámica",
+                "Madera",
+                "Cemento/Ladrillo",
+                "Ladrillo/Tierra",
+                "Otro"
+            ]
+        },
+        {
+            "id": "agua_fuente",
+            "label": "El agua es de:",
+            "type": "multiselect",
+            "options": [
+                "Red pública (agua corriente)",
+                "Perforación con bomba a motor",
+                "Pozo/Excavación",
+                "Cisterna/Camión/Agua de lluvia"
+            ]
+        },
+        {
+            "id": "bano_descarga",
+            "label": "¿El baño tiene descarga de agua (botón/cadena)?",
+            "type": "boolean"
+        },
+        {
+            "id": "parentesco",
+            "label": "Relación con el jefe de hogar",
+            "type": "multiselect",
+            "options": [
+                "Jefe/a",
+                "Esposa/o - Pareja",
+                "Hijo/a",
+                "Yerno/Nuera",
+                "Nieto/a",
+                "Madre/Padre",
+                "Suegro/a",
+                "Hermano/a",
+                "Otro familiar",
+                "No familiar"
+            ],
+            "required": true
+        },
+        {
+            "id": "sexo",
+            "label": "Sexo",
+            "type": "multiselect",
+            "options": [
+                "Varón",
+                "Mujer"
+            ],
+            "required": true
+        },
+        {
+            "id": "edad",
+            "label": "Edad",
+            "type": "number",
+            "required": true
+        },
+        {
+            "id": "escolaridad",
+            "label": "Nivel educativo más alto alcanzado",
+            "type": "multiselect",
+            "options": [
+                "Sin instrucción",
+                "Primaria incompleta",
+                "Primaria completa",
+                "Secundaria incompleta",
+                "Secundaria completa",
+                "Superior/Universitaria incompleta",
+                "Superior/Universitaria completa"
+            ]
+        },
+        {
+            "id": "cobertura_salud",
+            "label": "¿Tiene cobertura de salud por:",
+            "type": "multiselect",
+            "options": [
+                "Obra social/Prepaga",
+                "Plan estatal/PAMI",
+                "Solo sistema público"
+            ]
+        },
+        {
+            "id": "trabajo_semana",
+            "label": "¿Trabajó al menos una hora la semana pasada (inc. changas)?",
+            "type": "boolean"
+        },
+        {
+            "id": "busqueda_empleo",
+            "label": "¿Buscó trabajo en los últimos 30 días?",
+            "type": "boolean"
+        },
+        {
+            "id": "categoria_ocupacional",
+            "label": "Categoría ocupacional",
+            "type": "multiselect",
+            "options": [
+                "Patrón",
+                "Cuenta propia",
+                "Asalariado",
+                "Trabajador sin pago"
+            ]
+        },
+        {
+            "id": "descuento_jubilatorio",
+            "label": "¿Le descuentan para la jubilación (aportes)?",
+            "type": "boolean"
+        },
+        {
+            "id": "ingresos_monto",
+            "label": "Monto de ingreso total mensual ($)",
+            "type": "number"
+        },
+        {
+            "id": "location",
+            "label": "Ubicación del Relevamiento",
+            "type": "gps",
+            "auto_capture": true
+        }
+    ]
+}

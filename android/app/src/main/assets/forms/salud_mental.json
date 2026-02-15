@@ -1,0 +1,236 @@
+{
+    "form_name": "Salud Mental (PHQ-9 y GAD-7) - Argentina",
+    "fields": [
+        {
+            "id": "nombre",
+            "label": "Nombre",
+            "type": "text",
+            "required": true
+        },
+        {
+            "id": "apellido",
+            "label": "Apellido",
+            "type": "text",
+            "required": true
+        },
+        {
+            "id": "dni",
+            "label": "DNI",
+            "type": "number",
+            "required": true
+        },
+        {
+            "id": "bloque_phq9",
+            "label": "BLOQUE 1: CUESTIONARIO PHQ-9 (Depresión)",
+            "type": "text"
+        },
+        {
+            "id": "indicacion_phq9",
+            "label": "Durante las últimas 2 semanas, ¿con qué frecuencia le han molestado los siguientes problemas?",
+            "type": "text"
+        },
+        {
+            "id": "phq1",
+            "label": "1. Poco interés o placer en hacer las cosas",
+            "type": "multiselect",
+            "options": [
+                "Para nada",
+                "Varios días",
+                "Más de la mitad de los días",
+                "Casi todos los días"
+            ]
+        },
+        {
+            "id": "phq2",
+            "label": "2. Se ha sentido decaído/a, deprimido/a o sin esperanzas",
+            "type": "multiselect",
+            "options": [
+                "Para nada",
+                "Varios días",
+                "Más de la mitad de los días",
+                "Casi todos los días"
+            ]
+        },
+        {
+            "id": "phq3",
+            "label": "3. Dificultad para dormir o permanecer dormido/a, o ha dormido demasiado",
+            "type": "multiselect",
+            "options": [
+                "Para nada",
+                "Varios días",
+                "Más de la mitad de los días",
+                "Casi todos los días"
+            ]
+        },
+        {
+            "id": "phq4",
+            "label": "4. Se ha sentido cansado/a o con poca energía",
+            "type": "multiselect",
+            "options": [
+                "Para nada",
+                "Varios días",
+                "Más de la mitad de los días",
+                "Casi todos los días"
+            ]
+        },
+        {
+            "id": "phq5",
+            "label": "5. Con poco apetito o ha comido en exceso",
+            "type": "multiselect",
+            "options": [
+                "Para nada",
+                "Varios días",
+                "Más de la mitad de los días",
+                "Casi todos los días"
+            ]
+        },
+        {
+            "id": "phq6",
+            "label": "6. Se ha sentido mal con usted mismo/a – o que es un fracaso o que ha quedado mal con usted mismo/a o con su familia",
+            "type": "multiselect",
+            "options": [
+                "Para nada",
+                "Varios días",
+                "Más de la mitad de los días",
+                "Casi todos los días"
+            ]
+        },
+        {
+            "id": "phq7",
+            "label": "7. Ha tenido dificultad para concentrarse en cosas tales como leer el periódico o ver televisión",
+            "type": "multiselect",
+            "options": [
+                "Para nada",
+                "Varios días",
+                "Más de la mitad de los días",
+                "Casi todos los días"
+            ]
+        },
+        {
+            "id": "phq8",
+            "label": "8. ¿Se ha estado moviendo o hablando tan lento que otras personas podrían notarlo? o por el contrario – ha estado tan inquieto/a o agitado/a, que se ha estado moviendo mucho más de lo normal",
+            "type": "multiselect",
+            "options": [
+                "Para nada",
+                "Varios días",
+                "Más de la mitad de los días",
+                "Casi todos los días"
+            ]
+        },
+        {
+            "id": "phq9",
+            "label": "9. Ha pensado que estaría mejor muerto/a o se le ha ocurrido lastimarse de alguna manera",
+            "type": "multiselect",
+            "options": [
+                "Para nada",
+                "Varios días",
+                "Más de la mitad de los días",
+                "Casi todos los días"
+            ]
+        },
+        {
+            "id": "phq_dificultad",
+            "label": "Si marcó cualquiera de estos problemas, ¿qué tan difícil fue hacer su trabajo, tareas del hogar o llevarse bien con otros?",
+            "type": "multiselect",
+            "options": [
+                "Para nada difícil",
+                "Un poco difícil",
+                "Muy difícil",
+                "Extremadamente difícil"
+            ]
+        },
+        {
+            "id": "bloque_gad7",
+            "label": "BLOQUE 2: CUESTIONARIO GAD-7 (Ansiedad)",
+            "type": "text"
+        },
+        {
+            "id": "indicacion_gad7",
+            "label": "Durante las últimas 2 semanas, ¿con qué frecuencia le han molestado los siguientes problemas?",
+            "type": "text"
+        },
+        {
+            "id": "gad1",
+            "label": "1. Sentirse nervioso/a, ansioso/a o con los nervios de punta",
+            "type": "multiselect",
+            "options": [
+                "Para nada",
+                "Varios días",
+                "Más de la mitad de los días",
+                "Casi todos los días"
+            ]
+        },
+        {
+            "id": "gad2",
+            "label": "2. No poder dejar de preocuparse o no poder controlar la preocupación",
+            "type": "multiselect",
+            "options": [
+                "Para nada",
+                "Varios días",
+                "Más de la mitad de los días",
+                "Casi todos los días"
+            ]
+        },
+        {
+            "id": "gad3",
+            "label": "3. Preocuparse demasiado por diferentes cosas",
+            "type": "multiselect",
+            "options": [
+                "Para nada",
+                "Varios días",
+                "Más de la mitad de los días",
+                "Casi todos los días"
+            ]
+        },
+        {
+            "id": "gad4",
+            "label": "4. Dificultad para relajarse",
+            "type": "multiselect",
+            "options": [
+                "Para nada",
+                "Varios días",
+                "Más de la mitad de los días",
+                "Casi todos los días"
+            ]
+        },
+        {
+            "id": "gad5",
+            "label": "5. Estar tan inquieto/a que es difícil permanecer sentado/a quieto/a",
+            "type": "multiselect",
+            "options": [
+                "Para nada",
+                "Varios días",
+                "Más de la mitad de los días",
+                "Casi todos los días"
+            ]
+        },
+        {
+            "id": "gad6",
+            "label": "6. Enojarse o irritarse con facilidad",
+            "type": "multiselect",
+            "options": [
+                "Para nada",
+                "Varios días",
+                "Más de la mitad de los días",
+                "Casi todos los días"
+            ]
+        },
+        {
+            "id": "gad7",
+            "label": "7. Sentirse con miedo como si algo terrible fuera a suceder",
+            "type": "multiselect",
+            "options": [
+                "Para nada",
+                "Varios días",
+                "Más de la mitad de los días",
+                "Casi todos los días"
+            ]
+        },
+        {
+            "id": "location",
+            "label": "Ubicación del Relevamiento",
+            "type": "gps",
+            "auto_capture": true
+        }
+    ]
+}

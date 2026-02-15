@@ -1,0 +1,29 @@
+{
+    "surveys": [
+        {
+            "id": "eph",
+            "name": "Encuesta Permanente de Hogares (EPH)",
+            "file": "forms/eph.json"
+        },
+        {
+            "id": "enfr",
+            "name": "Factores de Riesgo (ENFR) 2018",
+            "file": "forms/enfr.json"
+        },
+        {
+            "id": "vacunacion",
+            "name": "Módulo de Vacunación",
+            "file": "forms/vacunacion.json"
+        },
+        {
+            "id": "enprecosp",
+            "name": "Consumo de Sustancias (ENPreCoSP)",
+            "file": "forms/consumo_sustancias.json"
+        },
+        {
+            "id": "salud_mental",
+            "name": "Salud Mental (PHQ-9 y GAD-7)",
+            "file": "forms/salud_mental.json"
+        }
+    ]
+}

@@ -1,0 +1,124 @@
+{
+    "form_name": "Control de Vacunación Nacional (Calendario Oficial)",
+    "fields": [
+        {
+            "id": "nombre",
+            "label": "Nombre",
+            "type": "text",
+            "required": true
+        },
+        {
+            "id": "apellido",
+            "label": "Apellido",
+            "type": "text",
+            "required": true
+        },
+        {
+            "id": "dni",
+            "label": "DNI",
+            "type": "number",
+            "required": true
+        },
+        {
+            "id": "bloque_recien_nacido",
+            "label": "RECIÉN NACIDO / 0-6 MESES",
+            "type": "text"
+        },
+        {
+            "id": "vacuna_bcg",
+            "label": "¿Tiene dosis única de BCG?",
+            "type": "boolean"
+        },
+        {
+            "id": "vacuna_hepb_rn",
+            "label": "¿Hepatitis B (dosis dentro de las 12hs de vida)?",
+            "type": "boolean"
+        },
+        {
+            "id": "vacuna_quintuple",
+            "label": "¿Quíntuple Pentavalente (2, 4 y 6 meses)?",
+            "type": "multiselect",
+            "options": [
+                "Esquema Completo",
+                "Esquema Incompleto",
+                "No iniciada"
+            ]
+        },
+        {
+            "id": "vacuna_ipv",
+            "label": "¿Poliomielitis IPV (2, 4 y 6 meses)?",
+            "type": "multiselect",
+            "options": [
+                "Esquema Completo",
+                "Esquema Incompleto",
+                "No iniciada"
+            ]
+        },
+        {
+            "id": "vacuna_neumo_conjugada",
+            "label": "¿Neumococo Conjugada (2, 4 meses y refuerzo 12 meses)?",
+            "type": "boolean"
+        },
+        {
+            "id": "bloque_niñez",
+            "label": "NIÑEZ (12 MESES - 11 AÑOS)",
+            "type": "text"
+        },
+        {
+            "id": "vacuna_triple_viral",
+            "label": "¿Triple Viral (12 meses y 5 años)?",
+            "type": "multiselect",
+            "options": [
+                "2 Dosis (Completo)",
+                "1 Dosis (Incompleto)",
+                "Ninguna"
+            ]
+        },
+        {
+            "id": "vacuna_varicela",
+            "label": "¿Varicela (15 meses y 5 años)?",
+            "type": "boolean"
+        },
+        {
+            "id": "vacuna_vph",
+            "label": "¿VPH (11 años - dosis única)?",
+            "type": "boolean"
+        },
+        {
+            "id": "vacuna_triple_bacteriana_acelular",
+            "label": "¿Triple Bacteriana Acelular (11 años)?",
+            "type": "boolean"
+        },
+        {
+            "id": "bloque_adultos",
+            "label": "ADOLESCENTES / ADULTOS / EMBARAZO",
+            "type": "text"
+        },
+        {
+            "id": "vacuna_doble_bacteriana",
+            "label": "¿Doble Bacteriana (cada 10 años)?",
+            "type": "boolean"
+        },
+        {
+            "id": "vacuna_antigripal",
+            "label": "¿Recibió Antigripal este año (grupos de riesgo)?",
+            "type": "boolean"
+        },
+        {
+            "id": "vacuna_hepatitis_b_adulto",
+            "label": "¿Esquema Hepatitis B Adulto (3 dosis)?",
+            "type": "boolean"
+        },
+        {
+            "id": "observaciones_vacunacion",
+            "label": "Observaciones o Carnet no disponible",
+            "type": "text"
+        },
+        {
+            "id": "location",
+            "label": "Punto de Relevamiento",
+            "type": "gps",
+            "auto_capture": true
+        }
+    ]
+}

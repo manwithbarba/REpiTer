@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">REpiTer</string>
+    <string name="guardar_encuesta">Guardar Encuesta</string>
+    <string name="exportar_datos">Exportar Datos (CSV/JSON)</string>
+    <string name="error_campo_requerido">Campo requerido</string>
+    <string name="obs_gps">Coordenadas se capturarán automáticamente al guardar</string>
+    <string name="error_dni_invalido">DNI inválido (debe tener 7 u 8 dígitos)</string>
+</resources>

@@ -1,0 +1,184 @@
+{
+    "form_name": "Factores de Riesgo (ENFR) 2018 - Adaptado",
+    "fields": [
+        {
+            "id": "nombre",
+            "label": "Nombre",
+            "type": "text",
+            "required": true
+        },
+        {
+            "id": "apellido",
+            "label": "Apellido",
+            "type": "text",
+            "required": true
+        },
+        {
+            "id": "dni",
+            "label": "DNI",
+            "type": "number",
+            "required": true
+        },
+        {
+            "id": "bloque_salud_general",
+            "label": "BLOQUE: SALUD GENERAL",
+            "type": "text",
+            "auto_capture": false
+        },
+        {
+            "id": "salud_general",
+            "label": "En general, ¿cómo diría que es su salud?",
+            "type": "multiselect",
+            "options": [
+                "Excelente",
+                "Muy buena",
+                "Buena",
+                "Regular",
+                "Mala"
+            ]
+        },
+        {
+            "id": "bloque_tabaco",
+            "label": "BLOQUE: TABACO",
+            "type": "text"
+        },
+        {
+            "id": "fuma_actualmente",
+            "label": "¿Fuma usted cigarrillos actualmente?",
+            "type": "multiselect",
+            "options": [
+                "Todos los días",
+                "Algunos días",
+                "No fuma"
+            ]
+        },
+        {
+            "id": "fuma_pasado",
+            "label": "En el pasado, ¿fumo cigarrillos diariamente durante al menos 6 meses?",
+            "type": "boolean"
+        },
+        {
+            "id": "humo_ajeno_hogar",
+            "label": "En la última semana, ¿alguien fumó dentro de su hogar en su presencia?",
+            "type": "boolean"
+        },
+        {
+            "id": "bloque_actividad_fisica",
+            "label": "BLOQUE: ACTIVIDAD FÍSICA (GPAQ)",
+            "type": "text"
+        },
+        {
+            "id": "af_intensa",
+            "label": "¿Realiza actividades intensas que implican una aceleración importante de la respiración (ej: correr, levantar cargas pesadas) por al menos 10 min?",
+            "type": "boolean"
+        },
+        {
+            "id": "af_moderada",
+            "label": "¿Realiza actividades de intensidad moderada (ej: caminar de prisa, ciclismo suave) por al menos 10 min?",
+            "type": "boolean"
+        },
+        {
+            "id": "tiempo_sentado",
+            "label": "¿Cuánto tiempo suele pasar sentado o recostado en un día típico (horas)?",
+            "type": "number"
+        },
+        {
+            "id": "bloque_alimentacion",
+            "label": "BLOQUE: ALIMENTACIÓN",
+            "type": "text"
+        },
+        {
+            "id": "frutas_verduras_dias",
+            "label": "En una semana típica, ¿cuántos días consume frutas o verduras?",
+            "type": "number"
+        },
+        {
+            "id": "frutas_verduras_porciones",
+            "label": "En esos días, ¿cuántas porciones consume en promedio?",
+            "type": "number"
+        },
+        {
+            "id": "sal_mesa",
+            "label": "¿Con qué frecuencia agrega sal a las comidas después de cocidas o en la mesa?",
+            "type": "multiselect",
+            "options": [
+                "Siempre",
+                "Casi siempre",
+                "A veces",
+                "Nunca"
+            ]
+        },
+        {
+            "id": "bebidas_azucaradas",
+            "label": "¿Con qué frecuencia consume bebidas azucaradas (gaseosas, jugos)?",
+            "type": "multiselect",
+            "options": [
+                "Diariamente",
+                "3-4 veces por semana",
+                "1-2 veces por semana",
+                "Rara vez/Nunca"
+            ]
+        },
+        {
+            "id": "bloque_alcohol",
+            "label": "BLOQUE: ALCOHOL",
+            "type": "text"
+        },
+        {
+            "id": "consumo_alcohol_12m",
+            "label": "¿Consumió alguna bebida alcohólica en los últimos 12 meses?",
+            "type": "boolean"
+        },
+        {
+            "id": "consumo_excesivo_episodico",
+            "label": "¿En los últimos 30 días, tomó 5 tragos o más en una sola oportunidad?",
+            "type": "boolean"
+        },
+        {
+            "id": "bloque_ent",
+            "label": "BLOQUE: ENFERMEDADES NO TRANSMISIBLES",
+            "type": "text"
+        },
+        {
+            "id": "prev_hipertension",
+            "label": "¿Alguna vez un profesional de salud le dijo que tenía la presión alta?",
+            "type": "boolean"
+        },
+        {
+            "id": "med_hipertension",
+            "label": "¿Actualmente toma medicación para la presión alta?",
+            "type": "boolean"
+        },
+        {
+            "id": "prev_diabetes",
+            "label": "¿Alguna vez le dijeron que tenía azúcar alta o diabetes?",
+            "type": "boolean"
+        },
+        {
+            "id": "prev_colesterol",
+            "label": "¿Alguna vez le dijeron que tenía colesterol alto?",
+            "type": "boolean"
+        },
+        {
+            "id": "bloque_mediciones",
+            "label": "BLOQUE: MEDICIONES (AUTORREPORTE)",
+            "type": "text"
+        },
+        {
+            "id": "peso_kg",
+            "label": "Peso (kg)",
+            "type": "number"
+        },
+        {
+            "id": "talla_cm",
+            "label": "Talla (cm)",
+            "type": "number"
+        },
+        {
+            "id": "location",
+            "label": "Georreferenciación",
+            "type": "gps",
+            "auto_capture": true
+        }
+    ]
+}

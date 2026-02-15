@@ -1,0 +1,109 @@
+{
+    "form_name": "Consumo de Sustancias (ENPreCoSP) 2011 - Adaptado",
+    "fields": [
+        {
+            "id": "nombre",
+            "label": "Nombre",
+            "type": "text",
+            "required": true
+        },
+        {
+            "id": "apellido",
+            "label": "Apellido",
+            "type": "text",
+            "required": true
+        },
+        {
+            "id": "dni",
+            "label": "DNI",
+            "type": "number",
+            "required": true
+        },
+        {
+            "id": "bloque_tabaco",
+            "label": "BLOQUE: TABACO",
+            "type": "text"
+        },
+        {
+            "id": "consumo_tabaco_vida",
+            "label": "¿Ha fumado tabaco alguna vez en su vida?",
+            "type": "boolean"
+        },
+        {
+            "id": "consumo_tabaco_30d",
+            "label": "¿Ha fumado tabaco en los últimos 30 días?",
+            "type": "boolean"
+        },
+        {
+            "id": "bloque_alcohol",
+            "label": "BLOQUE: BEBIDAS ALCOHÓLICAS",
+            "type": "text"
+        },
+        {
+            "id": "consumo_alcohol_vida",
+            "label": "¿Ha consumido bebidas alcohólicas alguna vez en su vida?",
+            "type": "boolean"
+        },
+        {
+            "id": "consumo_alcohol_30d",
+            "label": "¿Ha consumido bebidas alcohólicas en los últimos 30 días?",
+            "type": "boolean"
+        },
+        {
+            "id": "edad_inicio_alcohol",
+            "label": "¿A qué edad bebió alcohol por primera vez?",
+            "type": "number"
+        },
+        {
+            "id": "bloque_farmacos",
+            "label": "BLOQUE: PSICOFÁRMACOS",
+            "type": "text"
+        },
+        {
+            "id": "tranquilizantes_uso",
+            "label": "¿Alguna vez consumió tranquilizantes o ansiolíticos?",
+            "type": "boolean"
+        },
+        {
+            "id": "tranquilizantes_receta",
+            "label": "¿Fueron recetados por un médico?",
+            "type": "boolean"
+        },
+        {
+            "id": "estimulantes_uso",
+            "label": "¿Alguna vez consumió estimulantes o anfetaminas?",
+            "type": "boolean"
+        },
+        {
+            "id": "bloque_ilegales",
+            "label": "BLOQUE: SUSTANCIAS ILEGALES",
+            "type": "text"
+        },
+        {
+            "id": "marihuana_vida",
+            "label": "¿Ha consumido marihuana alguna vez en su vida?",
+            "type": "boolean"
+        },
+        {
+            "id": "marihuana_12m",
+            "label": "¿Ha consumido marihuana en los últimos 12 meses?",
+            "type": "boolean"
+        },
+        {
+            "id": "cocaina_vida",
+            "label": "¿Ha consumido cocaína alguna vez en su vida?",
+            "type": "boolean"
+        },
+        {
+            "id": "otras_sustancias",
+            "label": "¿Ha consumido otras sustancias (Éxtasis, Inhalables, Pasta Base, etc.)?",
+            "type": "boolean"
+        },
+        {
+            "id": "location",
+            "label": "Ubicación del Relevamiento",
+            "type": "gps",
+            "auto_capture": true
+        }
+    ]
+}

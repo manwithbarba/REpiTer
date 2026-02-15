@@ -9,7 +9,7 @@
     <!-- For creating files in Downloads, we generally don't need explicit WRITE permissions on Android 10+ if using MediaStore/Scanner, but keeps backward comp compat for now -->
 
     <application
-        android:name=".RepitApplication"
+        android:name="com.repit.v2.RepitApplication"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -20,7 +20,7 @@
         android:theme="@style/AppTheme"
         tools:targetApi="31">
         <activity
-            android:name=".FormSelectorActivity"
+            android:name="com.repit.v2.FormSelectorActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -28,7 +28,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name="com.repit.v2.MainActivity"
             android:exported="false" />
     </application>
 

@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    namespace 'com.repit'
+    namespace 'com.repit.v2'
     compileSdk 34
 
     defaultConfig {
-        applicationId "com.repit"
+        applicationId "com.repit.v2"
         minSdk 21
         targetSdk 34
         versionCode 1

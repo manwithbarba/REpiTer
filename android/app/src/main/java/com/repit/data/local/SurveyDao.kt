@@ -1,4 +1,4 @@
-package com.repit.data.local
+package com.repit.v2.data.local
 
 import androidx.room.Dao
 import androidx.room.Insert

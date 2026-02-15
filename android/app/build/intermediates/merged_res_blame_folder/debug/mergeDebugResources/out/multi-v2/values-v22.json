@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.repit.app-mergeDebugResources-40:/values-v22/values-v22.xml",
+            "outputFile": "com.repit.v2.app-mergeDebugResources-40:/values-v22/values-v22.xml",
             "map": [
                 {
                     "source": "C:\\Users\\jsanc\\.gradle\\caches\\9.2.1\\transforms\\64c40808ba21e213ba0162dd7d5de195\\workspace\\transformed\\appcompat-1.6.1\\res\\values-v22\\values-v22.xml",

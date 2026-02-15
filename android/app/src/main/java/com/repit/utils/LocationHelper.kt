@@ -1,4 +1,4 @@
-package com.repit.utils
+package com.repit.v2.utils
 
 import android.annotation.SuppressLint
 import android.content.Context

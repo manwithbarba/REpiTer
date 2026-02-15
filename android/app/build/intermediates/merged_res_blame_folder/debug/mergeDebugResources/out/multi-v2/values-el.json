@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.repit.app-mergeDebugResources-40:/values-el/values-el.xml",
+            "outputFile": "com.repit.v2.app-mergeDebugResources-40:/values-el/values-el.xml",
             "map": [
                 {
                     "source": "C:\\Users\\jsanc\\.gradle\\caches\\9.2.1\\transforms\\437627a8ccd4ce2e849418bcc6bcac36\\workspace\\transformed\\jetified-play-services-base-18.1.0\\res\\values-el\\values.xml",

@@ -1,4 +1,4 @@
-package com.repit.data.local
+package com.repit.v2.data.local
 
 import android.content.Context
 import androidx.room.Database

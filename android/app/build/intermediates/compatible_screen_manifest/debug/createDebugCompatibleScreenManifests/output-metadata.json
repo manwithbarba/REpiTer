@@ -4,7 +4,7 @@
     "type": "COMPATIBLE_SCREEN_MANIFEST",
     "kind": "Directory"
   },
-  "applicationId": "com.repit",
+  "applicationId": "com.repit.v2",
   "variantName": "debug",
   "elements": []
 }

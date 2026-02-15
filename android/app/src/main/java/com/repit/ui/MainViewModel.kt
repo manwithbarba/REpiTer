@@ -1,4 +1,4 @@
-package com.repit.ui
+package com.repit.v2.ui
 
 import android.app.Application
 import android.location.Location
@@ -6,12 +6,12 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
-import com.repit.RepitApplication
-import com.repit.data.FormRepository
-import com.repit.data.local.SurveyResponse
-import com.repit.data.model.FormConfig
-import com.repit.utils.FormParser
-import com.repit.utils.LocationHelper
+import com.repit.v2.RepitApplication
+import com.repit.v2.data.FormRepository
+import com.repit.v2.data.local.SurveyResponse
+import com.repit.v2.data.model.FormConfig
+import com.repit.v2.utils.FormParser
+import com.repit.v2.utils.LocationHelper
 import com.google.gson.Gson
 import kotlinx.coroutines.launch
 
@@ -67,7 +67,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
         viewModelScope.launch {
             _saveStatus.value = "Exportando datos..."
             val surveys = repository.getAllSurveysList()
-            val exportManager = com.repit.utils.ExportManager(getApplication())
+            val exportManager = com.repit.v2.utils.ExportManager(getApplication())
             val result = exportManager.exportData(surveys)
             _saveStatus.value = result
         }

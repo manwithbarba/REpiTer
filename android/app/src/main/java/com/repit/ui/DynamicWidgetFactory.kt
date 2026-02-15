@@ -1,4 +1,4 @@
-package com.repit.ui
+package com.repit.v2.ui
 
 import android.content.Context
 import android.text.InputType
@@ -9,8 +9,8 @@ import android.widget.EditText
 import android.widget.LinearLayout
 import android.widget.Spinner
 import android.widget.TextView
-import com.repit.data.model.FormField
-import com.repit.R
+import com.repit.v2.data.model.FormField
+import com.repit.v2.R
 
 class DynamicWidgetFactory(private val context: Context) {
 

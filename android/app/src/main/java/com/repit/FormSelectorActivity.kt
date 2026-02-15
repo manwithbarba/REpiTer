@@ -1,4 +1,4 @@
-package com.repit
+package com.repit.v2
 
 import android.content.Intent
 import android.os.Bundle
@@ -10,8 +10,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.gson.Gson
-import com.repit.databinding.ActivityFormSelectorBinding
-import com.repit.utils.FormParser
+import com.repit.v2.databinding.ActivityFormSelectorBinding
+import com.repit.v2.utils.FormParser
 
 data class SurveyIndex(val surveys: List<SurveyItem>)
 data class SurveyItem(val id: String, val name: String, val file: String)

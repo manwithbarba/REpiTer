@@ -1,4 +1,4 @@
-package com.repit.utils
+package com.repit.v2.utils
 
 import android.content.ContentValues
 import android.content.Context
@@ -6,7 +6,7 @@ import android.os.Build
 import android.os.Environment
 import android.provider.MediaStore
 import com.google.gson.Gson
-import com.repit.data.local.SurveyResponse
+import com.repit.v2.data.local.SurveyResponse
 import java.io.File
 import java.io.FileOutputStream
 import java.io.OutputStream

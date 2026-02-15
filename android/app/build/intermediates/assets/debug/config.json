@@ -1,9 +1,0 @@
-{
-  "form_name": "Censo Epidemiológico 2026",
-  "fields": [
-    {"id": "dni", "label": "DNI", "type": "number", "required": true},
-    {"id": "sintomas", "label": "Síntomas", "type": "multiselect", "options": ["Fiebre", "Tos", "Disnea", "Cefalea", "Mialgia"]},
-    {"id": "vacunado", "label": "¿Posee esquema completo?", "type": "boolean"},
-    {"id": "observaciones", "label": "Observaciones Adicionales", "type": "text", "required": false}
-  ]
-}

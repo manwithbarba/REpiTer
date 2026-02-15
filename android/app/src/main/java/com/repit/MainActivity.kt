@@ -1,4 +1,4 @@
-package com.repit
+package com.repit.v2
 
 import android.Manifest
 import android.content.pm.PackageManager
@@ -15,9 +15,9 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
-import com.repit.data.model.FormField
-import com.repit.ui.DynamicWidgetFactory
-import com.repit.ui.MainViewModel
+import com.repit.v2.data.model.FormField
+import com.repit.v2.ui.DynamicWidgetFactory
+import com.repit.v2.ui.MainViewModel
 
 class MainActivity : AppCompatActivity() {
 

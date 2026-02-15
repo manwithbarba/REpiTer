@@ -4,7 +4,7 @@
     "type": "LINKED_RESOURCES_BINARY_FORMAT",
     "kind": "Directory"
   },
-  "applicationId": "com.repit",
+  "applicationId": "com.repit.v2",
   "variantName": "debug",
   "elements": [
     {

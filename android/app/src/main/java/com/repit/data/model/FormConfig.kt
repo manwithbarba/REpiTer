@@ -1,4 +1,4 @@
-package com.repit.data.model
+package com.repit.v2.data.model
 
 import com.google.gson.annotations.SerializedName
 

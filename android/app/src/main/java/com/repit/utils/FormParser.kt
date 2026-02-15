@@ -1,8 +1,8 @@
-package com.repit.utils
+package com.repit.v2.utils
 
 import android.content.Context
 import com.google.gson.Gson
-import com.repit.data.model.FormConfig
+import com.repit.v2.data.model.FormConfig
 import java.io.IOException
 
 class FormParser(private val context: Context) {

@@ -38,7 +38,13 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
         _formConfig.value = parser.parseConfig(fileName)
     }
 
-    fun saveSurveyResponse(dataMap: Map<String, Any>) {
+    fun saveSurveyResponse(
+        dataMap: Map<String, Any>,
+        interviewerName: String?,
+        interviewerSurname: String?,
+        interviewerEmail: String?,
+        institution: String?
+    ) {
         viewModelScope.launch {
             _saveStatus.value = "Obteniendo ubicación..."
             
@@ -53,7 +59,11 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
                 timestamp = System.currentTimeMillis(),
                 latitude = location?.latitude,
                 longitude = location?.longitude,
-                dataJson = dataJson
+                dataJson = dataJson,
+                interviewerName = interviewerName,
+                interviewerSurname = interviewerSurname,
+                interviewerEmail = interviewerEmail,
+                institution = institution
             )
             
             // 4. Save to DB

@@ -20,13 +20,16 @@
         android:theme="@style/AppTheme"
         tools:targetApi="31">
         <activity
-            android:name="com.repit.v2.FormSelectorActivity"
+            android:name="com.repit.v2.SetupActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="com.repit.v2.FormSelectorActivity"
+            android:exported="false" />
         <activity
             android:name="com.repit.v2.MainActivity"
             android:exported="false"

@@ -14,5 +14,10 @@ data class SurveyResponse(
     
     @ColumnInfo(name = "longitude") val longitude: Double?,
     
-    @ColumnInfo(name = "data_json") val dataJson: String // Stores the full form response as specific implementations might change
+    @ColumnInfo(name = "data_json") val dataJson: String,
+
+    @ColumnInfo(name = "interviewer_name") val interviewerName: String?,
+    @ColumnInfo(name = "interviewer_surname") val interviewerSurname: String?,
+    @ColumnInfo(name = "interviewer_email") val interviewerEmail: String?,
+    @ColumnInfo(name = "institution") val institution: String?
 )

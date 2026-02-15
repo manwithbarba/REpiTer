@@ -29,13 +29,15 @@ class ExportManager(private val context: Context) {
 
         val sb = StringBuilder()
         // Header
-        sb.append("ID,Fecha_Hora,Latitud,Longitud,DatosJSON\n")
+        sb.append("ID,Fecha_Hora,Latitud,Longitud,Encuestador,Institucion,DatosJSON\n")
         
         for (survey in surveys) {
             sb.append("${survey.id},")
             sb.append("${survey.timestamp},")
             sb.append("${survey.latitude ?: ""},")
             sb.append("${survey.longitude ?: ""},")
+            sb.append("\"${survey.interviewerName} ${survey.interviewerSurname} (${survey.interviewerEmail})\",")
+            sb.append("\"${survey.institution ?: ""}\",")
             // Escape double quotes in JSON for CSV
             val escapedJson = survey.dataJson.replace("\"", "\"\"")
             sb.append("\"$escapedJson\"\n")
@@ -68,6 +70,19 @@ class ExportManager(private val context: Context) {
                     "identifier" to mapOf(
                         "system" to "http://renaper.gob.ar/dni",
                         "value" to dni
+                    )
+                ),
+                "author" to mapOf(
+                    "display" to "${survey.interviewerName} ${survey.interviewerSurname}",
+                    "identifier" to mapOf(
+                        "system" to "mailto",
+                        "value" to survey.interviewerEmail
+                    )
+                ),
+                "extension" to listOf(
+                    mapOf(
+                        "url" to "http://repit.v2/institution",
+                        "valueString" to survey.institution
                     )
                 ),
                 "item" to dataMap.map { (key, value) ->

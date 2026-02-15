@@ -51,6 +51,7 @@ class DynamicWidgetFactory(private val context: Context) {
         // Input Widget
         val view: View? = when (field.type) {
             "text", "number" -> createEditText(field)
+            "institution" -> createInstitutionSelector(field)
             "boolean" -> createBooleanSpinner(field) // Changed from CheckBox to Spinner per user request
             "multiselect" -> createSpinner(field)
             "gps" -> createGpsPlaceholder(field)
@@ -98,6 +99,17 @@ class DynamicWidgetFactory(private val context: Context) {
             val options = listOf("Seleccione...") + rawOptions
             adapter = ArrayAdapter(context, android.R.layout.simple_spinner_dropdown_item, options)
             background = ContextCompat.getDrawable(context, android.R.drawable.btn_default)
+        }
+    }
+
+    private fun createInstitutionSelector(field: FormField): TextView {
+        return TextView(context).apply {
+            text = "Toque para seleccionar efector..."
+            textSize = 16f
+            setPadding(12, 24, 12, 24)
+            background = ContextCompat.getDrawable(context, android.R.drawable.btn_default)
+            isClickable = true
+            isFocusable = true
         }
     }
 

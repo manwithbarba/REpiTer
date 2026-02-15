@@ -20,6 +20,12 @@
             "required": true
         },
         {
+            "id": "institution",
+            "label": "Efector Sanitario / Institución",
+            "type": "institution",
+            "required": true
+        },
+        {
             "id": "bloque_tabaco",
             "label": "BLOQUE: TABACO",
             "type": "header"

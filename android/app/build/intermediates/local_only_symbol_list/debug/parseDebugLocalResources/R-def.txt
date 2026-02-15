@@ -14,6 +14,7 @@ id recyclerViewSurveys
 id textViewTitle
 layout activity_form_selector
 mipmap ic_launcher
+mipmap ic_launcher_foreground
 mipmap ic_launcher_round
 string app_name
 string error_campo_requerido

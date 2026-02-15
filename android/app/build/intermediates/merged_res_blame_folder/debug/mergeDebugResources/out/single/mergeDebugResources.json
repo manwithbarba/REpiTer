@@ -12,12 +12,24 @@
         "source": "com.repit.v2.app-main-44:/drawable/ic_launcher_foreground.xml"
     },
     {
+        "merged": "com.repit.v2.app-debug-42:/mipmap-xxxhdpi_ic_launcher_foreground.png.flat",
+        "source": "com.repit.v2.app-main-44:/mipmap-xxxhdpi/ic_launcher_foreground.png"
+    },
+    {
         "merged": "com.repit.v2.app-debug-42:/xml_backup_rules.xml.flat",
         "source": "com.repit.v2.app-main-44:/xml/backup_rules.xml"
     },
     {
+        "merged": "com.repit.v2.app-debug-42:/mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "com.repit.v2.app-main-44:/mipmap-xxxhdpi/ic_launcher_round.png"
+    },
+    {
         "merged": "com.repit.v2.app-debug-42:/layout_activity_form_selector.xml.flat",
         "source": "com.repit.v2.app-main-44:/layout/activity_form_selector.xml"
+    },
+    {
+        "merged": "com.repit.v2.app-debug-42:/mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "com.repit.v2.app-main-44:/mipmap-xxxhdpi/ic_launcher.png"
     },
     {
         "merged": "com.repit.v2.app-debug-42:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",

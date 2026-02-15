@@ -29,7 +29,8 @@
         </activity>
         <activity
             android:name="com.repit.v2.MainActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
     </application>
 
 </manifest>

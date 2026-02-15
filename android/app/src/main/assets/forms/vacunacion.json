@@ -22,7 +22,7 @@
         {
             "id": "bloque_recien_nacido",
             "label": "RECIÉN NACIDO / 0-6 MESES",
-            "type": "text"
+            "type": "header"
         },
         {
             "id": "vacuna_bcg",
@@ -62,7 +62,7 @@
         {
             "id": "bloque_niñez",
             "label": "NIÑEZ (12 MESES - 11 AÑOS)",
-            "type": "text"
+            "type": "header"
         },
         {
             "id": "vacuna_triple_viral",
@@ -92,7 +92,7 @@
         {
             "id": "bloque_adultos",
             "label": "ADOLESCENTES / ADULTOS / EMBARAZO",
-            "type": "text"
+            "type": "header"
         },
         {
             "id": "vacuna_doble_bacteriana",

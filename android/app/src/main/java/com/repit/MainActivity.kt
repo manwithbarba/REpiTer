@@ -125,13 +125,27 @@ class MainActivity : AppCompatActivity() {
                         view.error = getString(R.string.error_dni_invalido)
                         isValid = false
                     }
-                    value = text
+                    value = if (text.isBlank()) null else text
                 }
                 "boolean" -> {
-                    value = (view as CheckBox).isChecked
+                    val selected = (view as Spinner).selectedItem.toString()
+                    value = when (selected) {
+                        "Sí" -> true
+                        "No" -> false
+                        else -> null
+                    }
+                    if (field.required && value == null) {
+                        isValid = false
+                        Toast.makeText(this, "Campo requerido: ${field.label}", Toast.LENGTH_SHORT).show()
+                    }
                 }
                 "multiselect" -> {
-                    value = (view as Spinner).selectedItem.toString()
+                    val selected = (view as Spinner).selectedItem.toString()
+                    value = if (selected == "Seleccione...") null else selected
+                    if (field.required && value == null) {
+                        isValid = false
+                        Toast.makeText(this, "Debe seleccionar una opción: ${field.label}", Toast.LENGTH_SHORT).show()
+                    }
                 }
             }
             

@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\jsanc\Proyectos IA\ReEpiTer\android\app\src\main\AndroidManifest.xml:2:1-35:12
-INJECTED from C:\Users\jsanc\Proyectos IA\ReEpiTer\android\app\src\main\AndroidManifest.xml:2:1-35:12
-INJECTED from C:\Users\jsanc\Proyectos IA\ReEpiTer\android\app\src\main\AndroidManifest.xml:2:1-35:12
-INJECTED from C:\Users\jsanc\Proyectos IA\ReEpiTer\android\app\src\main\AndroidManifest.xml:2:1-35:12
+ADDED from C:\Users\jsanc\Proyectos IA\ReEpiTer\android\app\src\main\AndroidManifest.xml:2:1-36:12
+INJECTED from C:\Users\jsanc\Proyectos IA\ReEpiTer\android\app\src\main\AndroidManifest.xml:2:1-36:12
+INJECTED from C:\Users\jsanc\Proyectos IA\ReEpiTer\android\app\src\main\AndroidManifest.xml:2:1-36:12
+INJECTED from C:\Users\jsanc\Proyectos IA\ReEpiTer\android\app\src\main\AndroidManifest.xml:2:1-36:12
 MERGED from [androidx.databinding:viewbinding:9.0.1] C:\Users\jsanc\.gradle\caches\9.2.1\transforms\f28d798220c32c1f2e61bb5f3fcb62ee\workspace\transformed\jetified-viewbinding-9.0.1\AndroidManifest.xml:2:1-7:12
 MERGED from [com.google.android.material:material:1.11.0] C:\Users\jsanc\.gradle\caches\9.2.1\transforms\e49fb88f6af81dae46262440dbd89076\workspace\transformed\material-1.11.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\jsanc\.gradle\caches\9.2.1\transforms\a7240b9428fc6b2098f410e07f1bc018\workspace\transformed\constraintlayout-2.1.4\AndroidManifest.xml:2:1-11:12
@@ -90,8 +90,8 @@ ADDED from C:\Users\jsanc\Proyectos IA\ReEpiTer\android\app\src\main\AndroidMani
 	android:name
 		ADDED from C:\Users\jsanc\Proyectos IA\ReEpiTer\android\app\src\main\AndroidManifest.xml:8:22-78
 application
-ADDED from C:\Users\jsanc\Proyectos IA\ReEpiTer\android\app\src\main\AndroidManifest.xml:11:5-33:19
-INJECTED from C:\Users\jsanc\Proyectos IA\ReEpiTer\android\app\src\main\AndroidManifest.xml:11:5-33:19
+ADDED from C:\Users\jsanc\Proyectos IA\ReEpiTer\android\app\src\main\AndroidManifest.xml:11:5-34:19
+INJECTED from C:\Users\jsanc\Proyectos IA\ReEpiTer\android\app\src\main\AndroidManifest.xml:11:5-34:19
 MERGED from [com.google.android.material:material:1.11.0] C:\Users\jsanc\.gradle\caches\9.2.1\transforms\e49fb88f6af81dae46262440dbd89076\workspace\transformed\material-1.11.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.11.0] C:\Users\jsanc\.gradle\caches\9.2.1\transforms\e49fb88f6af81dae46262440dbd89076\workspace\transformed\material-1.11.0\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\jsanc\.gradle\caches\9.2.1\transforms\a7240b9428fc6b2098f410e07f1bc018\workspace\transformed\constraintlayout-2.1.4\AndroidManifest.xml:9:5-20
@@ -159,7 +159,9 @@ ADDED from C:\Users\jsanc\Proyectos IA\ReEpiTer\android\app\src\main\AndroidMani
 	android:name
 		ADDED from C:\Users\jsanc\Proyectos IA\ReEpiTer\android\app\src\main\AndroidManifest.xml:27:27-74
 activity#com.repit.v2.MainActivity
-ADDED from C:\Users\jsanc\Proyectos IA\ReEpiTer\android\app\src\main\AndroidManifest.xml:30:9-32:40
+ADDED from C:\Users\jsanc\Proyectos IA\ReEpiTer\android\app\src\main\AndroidManifest.xml:30:9-33:58
+	android:windowSoftInputMode
+		ADDED from C:\Users\jsanc\Proyectos IA\ReEpiTer\android\app\src\main\AndroidManifest.xml:33:13-55
 	android:exported
 		ADDED from C:\Users\jsanc\Proyectos IA\ReEpiTer\android\app\src\main\AndroidManifest.xml:32:13-37
 	android:name

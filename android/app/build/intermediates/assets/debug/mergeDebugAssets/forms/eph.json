@@ -20,6 +20,11 @@
             "required": true
         },
         {
+            "id": "header_vivienda",
+            "label": "CARACTERÍSTICAS DEL HOGAR Y VIVIENDA",
+            "type": "header"
+        },
+        {
             "id": "tipo_vivienda",
             "label": "Tipo de vivienda",
             "type": "multiselect",
@@ -61,6 +66,11 @@
             "type": "boolean"
         },
         {
+            "id": "header_composicion",
+            "label": "COMPOSICIÓN DEL HOGAR",
+            "type": "header"
+        },
+        {
             "id": "parentesco",
             "label": "Relación con el jefe de hogar",
             "type": "multiselect",
@@ -95,6 +105,11 @@
             "required": true
         },
         {
+            "id": "header_salud",
+            "label": "EDUCACIÓN Y SALUD",
+            "type": "header"
+        },
+        {
             "id": "escolaridad",
             "label": "Nivel educativo más alto alcanzado",
             "type": "multiselect",
@@ -117,6 +132,11 @@
                 "Plan estatal/PAMI",
                 "Solo sistema público"
             ]
+        },
+        {
+            "id": "header_ocupacion",
+            "label": "CARACTERÍSTICAS OCUPACIONALES",
+            "type": "header"
         },
         {
             "id": "trabajo_semana",

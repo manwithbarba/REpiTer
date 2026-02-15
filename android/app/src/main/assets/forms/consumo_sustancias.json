@@ -22,7 +22,7 @@
         {
             "id": "bloque_tabaco",
             "label": "BLOQUE: TABACO",
-            "type": "text"
+            "type": "header"
         },
         {
             "id": "consumo_tabaco_vida",
@@ -37,7 +37,7 @@
         {
             "id": "bloque_alcohol",
             "label": "BLOQUE: BEBIDAS ALCOHÓLICAS",
-            "type": "text"
+            "type": "header"
         },
         {
             "id": "consumo_alcohol_vida",
@@ -57,7 +57,7 @@
         {
             "id": "bloque_farmacos",
             "label": "BLOQUE: PSICOFÁRMACOS",
-            "type": "text"
+            "type": "header"
         },
         {
             "id": "tranquilizantes_uso",
@@ -77,7 +77,7 @@
         {
             "id": "bloque_ilegales",
             "label": "BLOQUE: SUSTANCIAS ILEGALES",
-            "type": "text"
+            "type": "header"
         },
         {
             "id": "marihuana_vida",

@@ -22,7 +22,7 @@
         {
             "id": "bloque_phq9",
             "label": "BLOQUE 1: CUESTIONARIO PHQ-9 (Depresión)",
-            "type": "text"
+            "type": "header"
         },
         {
             "id": "indicacion_phq9",
@@ -142,7 +142,7 @@
         {
             "id": "bloque_gad7",
             "label": "BLOQUE 2: CUESTIONARIO GAD-7 (Ansiedad)",
-            "type": "text"
+            "type": "header"
         },
         {
             "id": "indicacion_gad7",

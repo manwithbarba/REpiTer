@@ -27,11 +27,11 @@ REpiTer es una aplicación Android pensada modularmente y diseñada para la reco
 
 Para instalar REpiTer en dispositivos Android, descarga siempre la última versión desde la sección oficial:
 
-👉 **[Descargar Último APK (Release)](https://github.com/manwithbarba/REpiTer/releases/tag/v1.0.2-beta)**
+👉 **[Descargar Último APK (Release)](https://github.com/manwithbarba/REpiTer/releases/tag/v1.0.3-beta)**
 
 ### ⚠️ Importante
 
-A partir de la versión **v1.0.1-beta**, se utiliza el paquete `com.repit.v2`. Si tienes versiones anteriores, te recomendamos desinstalarlas primero para evitar conflictos de firma.
+A partir de la versión **v1.0.3-beta**, se han incluido mejoras críticas en la selección de opciones (Sí/No) y la edición de campos de texto. Si tienes versiones anteriores, te recomendamos desinstalarlas primero para asegurar una experiencia limpia.
 
 ## 🛠️ Stack Tecnológico
 

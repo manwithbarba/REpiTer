@@ -27,11 +27,11 @@ REpiTer es una aplicación Android pensada modularmente y diseñada para la reco
 
 Para instalar REpiTer en dispositivos Android, descarga siempre la última versión desde la sección oficial:
 
-👉 **[Descargar Último APK (Release)](https://github.com/manwithbarba/REpiTer/releases/tag/v1.0.3-beta)**
+👉 **[Descargar Último APK (Release)](https://github.com/manwithbarba/REpiTer/releases/tag/v1.0.4-beta)**
 
 ### ⚠️ Importante
 
-A partir de la versión **v1.0.3-beta**, se han incluido mejoras críticas en la selección de opciones (Sí/No) y la edición de campos de texto. Si tienes versiones anteriores, te recomendamos desinstalarlas primero para asegurar una experiencia limpia.
+A partir de la versión **v1.0.4-beta**, se ha incluido la **Configuración del Encuestador** y un **Buscador de Efectores Sanitarios**. Además, se corrigieron problemas en la selección de opciones (Sí/No) y la edición de campos de texto heredados de versiones previas. Si tienes versiones anteriores, te recomendamos desinstalarlas primero para asegurar una experiencia limpia.
 
 ## 🛠️ Stack Tecnológico
 

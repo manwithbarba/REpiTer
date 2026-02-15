@@ -40,3 +40,11 @@ A partir de la versión **v1.0.3-beta**, se han incluido mejoras críticas en la
 - **Persistencia**: Room Database (SQLite)
 - **Localización**: Google Play Services (FusedLocationProvider)
 - **Estándares**: HL7 FHIR v4.0.1
+
+## 📄 Créditos y Licencia
+
+- **Autor**: [Ingresar Nombre o Institución aquí]
+- **Uso y Distribución**: Este software es de **distribución libre**. Se autoriza su uso, copia y redistribución, siempre que se mantenga la cita al autor original y se mencione a **REpiTer** como la fuente del desarrollo.
+
+---
+*Desarrollado para el fortalecimiento de la vigilancia epidemiológica y la salud pública digital.*

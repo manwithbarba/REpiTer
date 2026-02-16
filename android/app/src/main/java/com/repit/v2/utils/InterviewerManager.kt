@@ -13,7 +13,8 @@ class InterviewerManager(context: Context) {
         val email: String,
         val province: String,
         val municipality: String,
-        val institution: String
+        val institution: String,
+        val institutionSector: String
     )
 
     fun saveSession(data: SessionData) {
@@ -25,6 +26,7 @@ class InterviewerManager(context: Context) {
             putString("province", data.province)
             putString("municipality", data.municipality)
             putString("institution", data.institution)
+            putString("institution_sector", data.institutionSector)
             putBoolean("is_setup_complete", true)
             apply()
         }
@@ -38,8 +40,9 @@ class InterviewerManager(context: Context) {
         val province = prefs.getString("province", null) ?: ""
         val municipality = prefs.getString("municipality", null) ?: ""
         val institution = prefs.getString("institution", null) ?: ""
+        val sector = prefs.getString("institution_sector", null) ?: ""
         
-        return SessionData(date, name, surname, email, province, municipality, institution)
+        return SessionData(date, name, surname, email, province, municipality, institution, sector)
     }
 
     fun isSetupComplete(): Boolean {

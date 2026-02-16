@@ -182,7 +182,8 @@ class MainActivity : AppCompatActivity() {
                 session?.institution,
                 session?.realizationDate,
                 session?.province,
-                session?.municipality
+                session?.municipality,
+                session?.institutionSector
             )
         } else {
             Toast.makeText(this, "Por favor complete los campos requeridos", Toast.LENGTH_SHORT).show()

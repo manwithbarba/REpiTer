@@ -29,7 +29,7 @@ class ExportManager(private val context: Context) {
 
         val sb = StringBuilder()
         // Header
-        sb.append("ID,Fecha_Realizacion,Fecha_Guardado,Latitud,Longitud,Encuestador,Email_Encuestador,Provincia,Municipio,Establecimiento,DatosJSON\n")
+        sb.append("ID,Fecha_Realizacion,Fecha_Guardado,Latitud,Longitud,Encuestador,Email_Encuestador,Provincia,Municipio,Sector,Establecimiento,DatosJSON\n")
         
         for (survey in surveys) {
             sb.append("${survey.id},")
@@ -41,6 +41,7 @@ class ExportManager(private val context: Context) {
             sb.append("\"${survey.interviewerEmail ?: ""}\",")
             sb.append("\"${survey.province ?: ""}\",")
             sb.append("\"${survey.municipality ?: ""}\",")
+            sb.append("\"${survey.institutionSector ?: ""}\",")
             sb.append("\"${survey.institution ?: ""}\",")
             // Escape double quotes in JSON for CSV
             val escapedJson = survey.dataJson.replace("\"", "\"\"")
@@ -91,6 +92,10 @@ class ExportManager(private val context: Context) {
                     mapOf(
                         "url" to "http://repit.v2/municipality",
                         "valueString" to survey.municipality
+                    ),
+                    mapOf(
+                        "url" to "http://repit.v2/sector",
+                        "valueString" to survey.institutionSector
                     ),
                     mapOf(
                         "url" to "http://repit.v2/institution",

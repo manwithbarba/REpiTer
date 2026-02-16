@@ -26,7 +26,8 @@ class SetupActivity : AppCompatActivity() {
 
     data class RefesData(val provinces: List<Province>)
     data class Province(val name: String, val departments: List<Department>)
-    data class Department(val name: String, val establishments: List<String>)
+    data class Department(val name: String, val establishments: List<Establishment>)
+    data class Establishment(val n: String, val s: String) // n = name, s = sector
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -41,8 +42,13 @@ class SetupActivity : AppCompatActivity() {
         val etEmail = findViewById<TextInputEditText>(R.id.etEmail)
         val spinnerProvince = findViewById<Spinner>(R.id.spinnerProvince)
         val spinnerMunicipality = findViewById<Spinner>(R.id.spinnerMunicipality)
+        val spinnerSector = findViewById<Spinner>(R.id.spinnerSector)
         val tvInstitution = findViewById<TextView>(R.id.tvInstitutionSelector)
         val btnSave = findViewById<Button>(R.id.btnSave)
+
+        // Sector Spinner Setup
+        val sectors = listOf("Todos los Sectores", "Público/Estatal", "Privado", "Privado/Mutual", "Otros")
+        spinnerSector.adapter = ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, sectors)
 
         // Date Picker Logic
         val calendar = Calendar.getInstance()
@@ -83,15 +89,40 @@ class SetupActivity : AppCompatActivity() {
             override fun onNothingSelected(parent: AdapterView<*>?) {}
         }
 
+        spinnerSector.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+            override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
+                // Changing sector invalidates selected institution to be safe
+                tvInstitution.text = "Tocar para seleccionar establecimiento..."
+                selectedInstitution = ""
+            }
+            override fun onNothingSelected(parent: AdapterView<*>?) {}
+        }
+
         tvInstitution.setOnClickListener {
             val provPos = spinnerProvince.selectedItemPosition
             val muniPos = spinnerMunicipality.selectedItemPosition
+            val sector = spinnerSector.selectedItem.toString()
+
             if (provPos <= 0 || muniPos <= 0) {
                 Toast.makeText(this, "Debe seleccionar Provincia y Municipio primero", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
+
             val establishments = refesData?.provinces?.get(provPos - 1)?.departments?.get(muniPos - 1)?.establishments ?: emptyList()
-            showInstitutionSearch(establishments, tvInstitution)
+            
+            // Filter by sector
+            val filtered = if (sector == "Todos los Sectores") {
+                establishments
+            } else {
+                establishments.filter { it.s == sector }
+            }
+
+            if (filtered.isEmpty()) {
+                Toast.makeText(this, "No hay establecimientos en el sector '$sector' para este municipio", Toast.LENGTH_LONG).show()
+                return@setOnClickListener
+            }
+
+            showInstitutionSearch(filtered, tvInstitution)
         }
 
         // Pre-fill from previous session
@@ -115,6 +146,10 @@ class SetupActivity : AppCompatActivity() {
                 if (mIndex >= 0) {
                     spinnerMunicipality.setSelection(mIndex + 1)
                 }
+
+                // Sector pre-selection
+                val sIndex = sectors.indexOf(session.institutionSector)
+                if (sIndex >= 0) spinnerSector.setSelection(sIndex)
                 
                 // Pre-fill institution
                 if (session.institution.isNotEmpty()) {
@@ -132,6 +167,7 @@ class SetupActivity : AppCompatActivity() {
             val email = etEmail.text.toString().trim()
             val province = spinnerProvince.selectedItem?.toString() ?: ""
             val municipality = spinnerMunicipality.selectedItem?.toString() ?: ""
+            val sector = spinnerSector.selectedItem?.toString() ?: ""
 
             if (name.isEmpty() || surname.isEmpty() || email.isEmpty() || province == "Seleccione Provincia..." || municipality == "Seleccione Municipio..." || selectedInstitution.isEmpty()) {
                 Toast.makeText(this, "Por favor complete todos los campos", Toast.LENGTH_SHORT).show()
@@ -139,7 +175,7 @@ class SetupActivity : AppCompatActivity() {
             }
 
             interviewerManager.saveSession(
-                InterviewerManager.SessionData(date, name, surname, email, province, municipality, selectedInstitution)
+                InterviewerManager.SessionData(date, name, surname, email, province, municipality, selectedInstitution, sector)
             )
             
             startActivity(Intent(this, FormSelectorActivity::class.java))
@@ -157,12 +193,13 @@ class SetupActivity : AppCompatActivity() {
         }
     }
 
-    private fun showInstitutionSearch(list: List<String>, target: TextView) {
+    private fun showInstitutionSearch(list: List<Establishment>, target: TextView) {
         val dialogView = layoutInflater.inflate(R.layout.dialog_institution_selector, null)
         val etSearch = dialogView.findViewById<EditText>(R.id.etSearchInstitution)
         val rv = dialogView.findViewById<RecyclerView>(R.id.rvInstitutions)
 
-        val institutions = list.map { Institution(it, "", "", "Efector") }
+        // Map Establishment objects to the UI Institution model
+        val institutions = list.map { Institution(it.n, it.s, "", "Efector") }
         val adapter = InstitutionAdapter(institutions) { selected ->
             target.text = selected.name
             selectedInstitution = selected.name

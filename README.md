@@ -9,12 +9,12 @@ REpiTer es una aplicación Android pensada modularmente y diseñada para la reco
 ## 🚀 Características Principales
 
 - **📋 Metadatos de Sesión Globales**: Gestión del contexto de trabajo (Día, Responsable, Institución) al inicio de cada jornada, eliminando la selección manual en cada encuesta.
-- **🏥 Jerarquía Institucional (REFES Nacional Corporizado)**: Integración de la base de datos oficial completa con más de 36.000 establecimientos de todo el país, seleccionables por Provincia y Municipio.
+- **🏥 Jerarquía Nacional con Filtros (REFES Corporizado)**: Selección jerárquica por Provincia y Municipio, con filtrado inteligente por **Sector** (Estatal, Privado, Mutual) para agilizar la búsqueda en más de 36.000 centros.
 - **⚙️ Motor Dinámico de Formularios**: Los cuestionarios se generan dinámicamente a partir de configuraciones JSON, lo que permite añadir nuevas encuestas sin modificar el código fuente.
 - **📍 Georreferenciación Automática**: Captura coordenadas GPS de alta precisión en el momento exacto del guardado.
 - **📡 Interoperabilidad HL7 FHIR**: Exportación en formato FHIR QuestionnaireResponse (JSON).
-- **💾 Exportación Flexible**: Generación de archivos CSV enriquecidos con metadatos de sesión y JSON para integración técnica.
-- **📵 Offline-First**: Almacenamiento local mediante base de datos Room v3, garantizando que no se pierda información.
+- **💾 Exportación Flexible**: Generación de archivos CSV enriquecidos con metadatos de sesión (incluyendo Sector) y JSON para integración técnica.
+- **📵 Offline-First**: Almacenamiento local mediante base de datos Room v4, garantizando que no se pierda información.
 
 ## 📋 Módulos de Relevamiento Incluidos
 

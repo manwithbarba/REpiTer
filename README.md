@@ -8,12 +8,13 @@ REpiTer es una aplicación Android pensada modularmente y diseñada para la reco
 
 ## 🚀 Características Principales
 
+- **📋 Metadatos de Sesión Globales**: Gestión del contexto de trabajo (Día, Responsable, Institución) al inicio de cada jornada, eliminando la selección manual en cada encuesta.
+- **🏥 Jerarquía Institucional (REFES)**: Integración de la base de datos oficial de centros de salud (REFES) con selección jerárquica por Provincia y Municipio.
 - **⚙️ Motor Dinámico de Formularios**: Los cuestionarios se generan dinámicamente a partir de configuraciones JSON, lo que permite añadir nuevas encuestas sin modificar el código fuente.
-- **📍 Georreferenciación Automática**: Captura coordenadas GPS de alta precisión en el momento exacto del guardado de cada registro.
-- **📡 Interoperabilidad HL7 FHIR**: Exportación de datos en formato FHIR QuestionnaireResponse (JSON) para integración directa con sistemas de Historia Clínica Electrónica.
-- **💾 Exportación Flexible**: Generación de archivos CSV para análisis estadístico (Excel, R, Python) y JSON para integración técnica.
-- **📵 Offline-First**: Almacenamiento local mediante base de datos Room, garantizando que no se pierda información en zonas sin cobertura.
-- **🛡️ Validación de Identidad**: Validación local de DNI y campos obligatorios de identidad para asegurar la trazabilidad del dato.
+- **📍 Georreferenciación Automática**: Captura coordenadas GPS de alta precisión en el momento exacto del guardado.
+- **📡 Interoperabilidad HL7 FHIR**: Exportación en formato FHIR QuestionnaireResponse (JSON).
+- **💾 Exportación Flexible**: Generación de archivos CSV enriquecidos con metadatos de sesión y JSON para integración técnica.
+- **📵 Offline-First**: Almacenamiento local mediante base de datos Room v3, garantizando que no se pierda información.
 
 ## 📋 Módulos de Relevamiento Incluidos
 
@@ -21,17 +22,17 @@ REpiTer es una aplicación Android pensada modularmente y diseñada para la reco
 - **Factores de Riesgo (ENFR) 2018**: Versión adaptada para relevamientos de salud cardiovascular.
 - **Consumo de Sustancias (ENPreCoSP)**: Módulo adaptado para el relevamiento de prevalencia de consumo.
 - **Control de Vacunación**: Módulo basado íntegramente en el Calendario Nacional de Vacunación de Argentina.
-- **Salud Mental**: Incluye las escalas validadas **PHQ-9** (Depresión) y **GAD-7** (Ansiedad).
+- **Salud Mental**: Incluye las escalas validadas **PHQ-9** y **GAD-7**.
 
 ## 📲 Instalación
 
 Para instalar REpiTer en dispositivos Android, descarga siempre la última versión desde la sección oficial:
 
-👉 **[Descargar Último APK (Release)](https://github.com/manwithbarba/REpiTer/releases/tag/v1.0.4-beta)**
+👉 **[Descargar Último APK (Release v1.1.0-beta)](https://github.com/manwithbarba/REpiTer/releases/tag/v1.1.0-beta)**
 
 ### ⚠️ Importante
 
-A partir de la versión **v1.0.4-beta**, se ha incluido la **Configuración del Encuestador** y un **Buscador de Efectores Sanitarios**. Además, se corrigieron problemas en la selección de opciones (Sí/No) y la edición de campos de texto heredados de versiones previas. Si tienes versiones anteriores, te recomendamos desinstalarlas primero para asegurar una experiencia limpia.
+A partir de la versión **v1.1.0-beta**, se ha implementado el **Flujo de Sesión Obligatorio**. Al iniciar la app, deberás configurar la fecha del relevamiento y seleccionar tu establecimiento mediante la nueva jerarquía REFES. Esto asegura que todos los registros del día queden correctamente vinculados institucionalmente.
 
 ## 🛠️ Stack Tecnológico
 

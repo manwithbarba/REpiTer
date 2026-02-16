@@ -19,7 +19,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Configuración del Encuestador"
+            android:text="Datos de la Sesión"
             android:textSize="24sp"
             android:textStyle="bold"
             android:gravity="center"
@@ -28,10 +28,27 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Estos datos se incluirán en cada registro epidemiológico para garantizar la trazabilidad."
+            android:text="Configure el contexto de trabajo para esta jornada de relevamiento."
             android:gravity="center"
             android:layout_marginBottom="32dp" />
 
+        <!-- 1. Fecha de Realización -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:hint="Fecha de Realización"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:clickable="true" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- 2. Datos del Encuestador -->
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -42,7 +59,7 @@
                 android:id="@+id/etName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Nombre"
+                android:hint="Nombre del Encuestador"
                 android:inputType="textCapWords" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -56,14 +73,14 @@
                 android:id="@+id/etSurname"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Apellido"
+                android:hint="Apellido del Encuestador"
                 android:inputType="textCapWords" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="32dp"
+            android:layout_marginBottom="16dp"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -74,11 +91,45 @@
                 android:inputType="textEmailAddress" />
         </com.google.android.material.textfield.TextInputLayout>
 
+        <!-- 3. Jerarquía REFES -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ubicación y Establecimiento"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <Spinner
+            android:id="@+id/spinnerProvince"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginBottom="16dp"
+            android:background="@android:drawable/btn_default" />
+
+        <Spinner
+            android:id="@+id/spinnerMunicipality"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginBottom="16dp"
+            android:background="@android:drawable/btn_default" />
+
+        <TextView
+            android:id="@+id/tvInstitutionSelector"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tocar para seleccionar establecimiento..."
+            android:textSize="16sp"
+            android:padding="16dp"
+            android:background="@android:drawable/btn_default"
+            android:layout_marginBottom="32dp"
+            android:clickable="true"
+            android:focusable="true" />
+
         <Button
             android:id="@+id/btnSave"
             android:layout_width="match_parent"
             android:layout_height="64dp"
-            android:text="Comenzar Relevamiento"
+            android:text="Iniciar Sesión de Trabajo"
             android:textSize="18sp" />
 
     </LinearLayout>

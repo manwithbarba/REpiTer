@@ -1,0 +1,80 @@
+{
+    "provinces": [
+        {
+            "name": "Buenos Aires",
+            "departments": [
+                {
+                    "name": "General Pueyrredón (Mar del Plata)",
+                    "establishments": [
+                        "Hospital Interzonal General de Agudos (HIGA) Dr. Oscar Alende",
+                        "Hospital Interzonal Especializado Materno Infantil (HIEMI) Don Victorio Tetamanti",
+                        "CAPS N° 1 Centro",
+                        "CAPS N° 2 Puerto",
+                        "CAPS Batán",
+                        "CAPS La Peregrina",
+                        "Centro de Salud Mental N° 1"
+                    ]
+                },
+                {
+                    "name": "La Plata",
+                    "establishments": [
+                        "Hospital Interzonal General de Agudos Prof. Dr. Rodolfo Rossi",
+                        "Hospital de Niños Sor María Ludovica",
+                        "Hospital San Juan de Dios"
+                    ]
+                },
+                {
+                    "name": "Bahía Blanca",
+                    "establishments": [
+                        "Hospital Interzonal General de Agudos Dr. José Penna",
+                        "Hospital Municipal de Agudos Dr. Leónidas Lucero"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "CABA",
+            "departments": [
+                {
+                    "name": "Comuna 1",
+                    "establishments": [
+                        "Hospital General de Agudos Dr. Cosme Argerich",
+                        "Hospital de Pediatría Dr. Pedro de Elizalde"
+                    ]
+                },
+                {
+                    "name": "Comuna 4",
+                    "establishments": [
+                        "Hospital de Infecciosas Francisco J. Muñiz",
+                        "Hospital Nacional de Pediatría Prof. Dr. Juan P. Garrahan"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Córdoba",
+            "departments": [
+                {
+                    "name": "Capital",
+                    "establishments": [
+                        "Hospital Nacional de Clínicas",
+                        "Hospital de Niños de la Santísima Trinidad",
+                        "Hospital Córdoba"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Santa Fe",
+            "departments": [
+                {
+                    "name": "Rosario",
+                    "establishments": [
+                        "Hospital de Emergencias Dr. Clemente Álvarez (HECA)",
+                        "Hospital Provincial del Centenario"
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -20,12 +20,6 @@
             "required": true
         },
         {
-            "id": "institution",
-            "label": "Efector Sanitario / Institución",
-            "type": "institution",
-            "required": true
-        },
-        {
             "id": "bloque_phq9",
             "label": "BLOQUE 1: CUESTIONARIO PHQ-9 (Depresión)",
             "type": "header"

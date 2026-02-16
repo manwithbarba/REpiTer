@@ -34,7 +34,6 @@ class MainActivity : AppCompatActivity() {
     private val formContainer: LinearLayout by lazy { LinearLayout(this).apply { orientation = LinearLayout.VERTICAL } }
     private val factory by lazy { DynamicWidgetFactory(this) }
     private val interviewerManager by lazy { InterviewerManager(this) }
-    private var selectedInstitution: String? = null
     
     // Store reference to fields to extract data later
     private val fieldViews = mutableMapOf<String, FormField>()
@@ -113,9 +112,6 @@ class MainActivity : AppCompatActivity() {
         
         fields.forEach { field ->
             val view = factory.createWidget(field, formContainer)
-            if (field.type == "institution") {
-                view?.setOnClickListener { showInstitutionDialog(view as TextView) }
-            }
             fieldViews[field.id] = field
         }
     }
@@ -177,72 +173,22 @@ class MainActivity : AppCompatActivity() {
         }
 
         if (isValid) {
-            val interviewer = interviewerManager.getInterviewer()
+            val session = interviewerManager.getSession()
             viewModel.saveSurveyResponse(
                 dataMap,
-                interviewer?.name,
-                interviewer?.surname,
-                interviewer?.email,
-                selectedInstitution
+                session?.name,
+                session?.surname,
+                session?.email,
+                session?.institution,
+                session?.realizationDate,
+                session?.province,
+                session?.municipality
             )
         } else {
             Toast.makeText(this, "Por favor complete los campos requeridos", Toast.LENGTH_SHORT).show()
         }
     }
 
-    private fun showInstitutionDialog(targetView: TextView) {
-        val dialogView = layoutInflater.inflate(R.layout.dialog_institution_selector, null)
-        val etSearch = dialogView.findViewById<com.google.android.material.textfield.TextInputEditText>(R.id.etSearchInstitution)
-        val rv = dialogView.findViewById<RecyclerView>(R.id.rvInstitutions)
-
-        // Mock data - will be replaced by actual REFES integration
-        val allInstitutions = listOf(
-            Institution("Hospital Regional Mar del Plata", "Buenos Aires", "General Pueyrredón", "Hospital"),
-            Institution("CAPS Centro de Salud N1", "Buenos Aires", "General Pueyrredón", "CAPS"),
-            Institution("Hospital Interzonal General de Agudos (HIGA)", "Buenos Aires", "General Pueyrredón", "Hospital"),
-            Institution("CAPS Batán", "Buenos Aires", "General Pueyrredón", "CAPS"),
-            Institution("CAPS La Peregrina", "Buenos Aires", "General Pueyrredón", "CAPS")
-        )
-
-        val adapter = InstitutionAdapter(allInstitutions) { selected ->
-            targetView.text = selected.name
-            selectedInstitution = "${selected.name} (${selected.municipality})"
-            targetView.setTextColor(ContextCompat.getColor(this, R.color.black))
-            // Dismiss dialog - we need the dialog reference
-        }
-
-        rv.layoutManager = LinearLayoutManager(this)
-        rv.adapter = adapter
-
-        val dialog = AlertDialog.Builder(this)
-            .setView(dialogView)
-            .setCancelable(true)
-            .create()
-
-        etSearch.addTextChangedListener(object : TextWatcher {
-            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
-            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-                val query = s.toString().lowercase()
-                val filtered = allInstitutions.filter { 
-                    it.name.lowercase().contains(query) || 
-                    it.municipality.lowercase().contains(query)
-                }
-                adapter.updateList(filtered)
-            }
-            override fun afterTextChanged(s: Editable?) {}
-        })
-
-        // Override adapter click to dismiss dialog
-        val finalAdapter = InstitutionAdapter(allInstitutions) { selected ->
-            targetView.text = selected.name
-            selectedInstitution = "${selected.name} (${selected.municipality})"
-            targetView.setTextColor(ContextCompat.getColor(this, android.R.color.black))
-            dialog.dismiss()
-        }
-        rv.adapter = finalAdapter
-
-        dialog.show()
-    }
 
     private val requestPermissionLauncher = registerForActivityResult(
         ActivityResultContracts.RequestMultiplePermissions()

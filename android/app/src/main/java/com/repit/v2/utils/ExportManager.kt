@@ -29,14 +29,18 @@ class ExportManager(private val context: Context) {
 
         val sb = StringBuilder()
         // Header
-        sb.append("ID,Fecha_Hora,Latitud,Longitud,Encuestador,Institucion,DatosJSON\n")
+        sb.append("ID,Fecha_Realizacion,Fecha_Guardado,Latitud,Longitud,Encuestador,Email_Encuestador,Provincia,Municipio,Establecimiento,DatosJSON\n")
         
         for (survey in surveys) {
             sb.append("${survey.id},")
-            sb.append("${survey.timestamp},")
+            sb.append("${survey.realizationDate ?: ""},")
+            sb.append("${SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.getDefault()).format(Date(survey.timestamp))},")
             sb.append("${survey.latitude ?: ""},")
             sb.append("${survey.longitude ?: ""},")
-            sb.append("\"${survey.interviewerName} ${survey.interviewerSurname} (${survey.interviewerEmail})\",")
+            sb.append("\"${survey.interviewerName} ${survey.interviewerSurname}\",")
+            sb.append("\"${survey.interviewerEmail ?: ""}\",")
+            sb.append("\"${survey.province ?: ""}\",")
+            sb.append("\"${survey.municipality ?: ""}\",")
             sb.append("\"${survey.institution ?: ""}\",")
             // Escape double quotes in JSON for CSV
             val escapedJson = survey.dataJson.replace("\"", "\"\"")
@@ -65,7 +69,7 @@ class ExportManager(private val context: Context) {
             val questionnaireResponse = mutableMapOf<String, Any>(
                 "resourceType" to "QuestionnaireResponse",
                 "status" to "completed",
-                "authored" to SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'", Locale.getDefault()).format(Date(survey.timestamp)),
+                "authored" to (survey.realizationDate ?: SimpleDateFormat("yyyy-MM-dd", Locale.getDefault()).format(Date(survey.timestamp))),
                 "subject" to mapOf(
                     "identifier" to mapOf(
                         "system" to "http://renaper.gob.ar/dni",
@@ -80,6 +84,14 @@ class ExportManager(private val context: Context) {
                     )
                 ),
                 "extension" to listOf(
+                    mapOf(
+                        "url" to "http://repit.v2/province",
+                        "valueString" to survey.province
+                    ),
+                    mapOf(
+                        "url" to "http://repit.v2/municipality",
+                        "valueString" to survey.municipality
+                    ),
                     mapOf(
                         "url" to "http://repit.v2/institution",
                         "valueString" to survey.institution

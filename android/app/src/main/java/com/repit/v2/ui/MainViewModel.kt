@@ -43,7 +43,10 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
         interviewerName: String?,
         interviewerSurname: String?,
         interviewerEmail: String?,
-        institution: String?
+        institution: String?,
+        realizationDate: String?,
+        province: String?,
+        municipality: String?
     ) {
         viewModelScope.launch {
             _saveStatus.value = "Obteniendo ubicación..."
@@ -63,7 +66,10 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
                 interviewerName = interviewerName,
                 interviewerSurname = interviewerSurname,
                 interviewerEmail = interviewerEmail,
-                institution = institution
+                institution = institution,
+                realizationDate = realizationDate,
+                province = province,
+                municipality = municipality
             )
             
             // 4. Save to DB

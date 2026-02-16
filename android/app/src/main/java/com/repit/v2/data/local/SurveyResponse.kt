@@ -19,5 +19,8 @@ data class SurveyResponse(
     @ColumnInfo(name = "interviewer_name") val interviewerName: String?,
     @ColumnInfo(name = "interviewer_surname") val interviewerSurname: String?,
     @ColumnInfo(name = "interviewer_email") val interviewerEmail: String?,
-    @ColumnInfo(name = "institution") val institution: String?
+    @ColumnInfo(name = "institution") val institution: String?,
+    @ColumnInfo(name = "realization_date") val realizationDate: String?,
+    @ColumnInfo(name = "province") val province: String?,
+    @ColumnInfo(name = "municipality") val municipality: String?
 )

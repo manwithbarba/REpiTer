@@ -51,7 +51,6 @@ class DynamicWidgetFactory(private val context: Context) {
         // Input Widget
         val view: View? = when (field.type) {
             "text", "number" -> createEditText(field)
-            "institution" -> createInstitutionSelector(field)
             "boolean" -> createBooleanSpinner(field) // Changed from CheckBox to Spinner per user request
             "multiselect" -> createSpinner(field)
             "gps" -> createGpsPlaceholder(field)
@@ -102,16 +101,6 @@ class DynamicWidgetFactory(private val context: Context) {
         }
     }
 
-    private fun createInstitutionSelector(field: FormField): TextView {
-        return TextView(context).apply {
-            text = "Toque para seleccionar efector..."
-            textSize = 16f
-            setPadding(12, 24, 12, 24)
-            background = ContextCompat.getDrawable(context, android.R.drawable.btn_default)
-            isClickable = true
-            isFocusable = true
-        }
-    }
 
     private fun createGpsPlaceholder(field: FormField): TextView {
         return TextView(context).apply {
